@@ -310,7 +310,7 @@ function apagarFogo(){
     if(backgroundImage !== 'url("")'){
         console.log(backgroundImage)
         body.style.backgroundImage = ``; 
-        tocarSom('../../assets/sounds/Fizz.ogg')
+        tocarSom('./assets/sounds/Fizz.ogg')
     }; 
 }
 
