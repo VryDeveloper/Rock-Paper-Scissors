@@ -340,7 +340,7 @@ const fireCheck = () =>{
         changeImageSrc('rockpc', './assets/Iron_Ingot.webp')
         tocarSom('./assets/sounds/Pop.ogg')
     } else if (fire >= 13){
-        changeSiteBackground('./assets/Fire.Webp')
+        changeSiteBackground('./assets/Fire.webp')
         tocarSom('./assets/sounds/Fire.ogg')
     }
 }
