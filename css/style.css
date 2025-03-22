@@ -1,0 +1,333 @@
+*{
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-image: url();
+    background-size: cover;
+    background-size: center;
+}
+h1{
+    font-weight: 550;
+}
+
+.rm-border{
+    border: none;
+    outline: none;
+}
+
+.gap{
+    padding: 8px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: #198754;
+    color: white;
+    padding: 5px 0;
+    z-index: 1000; /* Garante que a barra fique sobre outros elementos */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    margin-top: 6px;
+    margin-right: 8px;
+    display: flex; /* Organiza os links em linha */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.top-bar .menuButtons{
+    position: absolute;
+    left: 5px;
+}
+
+.top-bar .menuButtons .btn-menu {
+
+    border: none;
+    width: 45px; /* Define a largura */
+    height: 45px; /* Define a altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Opcional, ajusta o fundo */
+}
+
+.top-bar .menuButtons .btn-menu h1 {
+    margin-top: 10px;
+    font-size: 44px; /* Ajuste o tamanho do ícone */
+    color: #fff; /* Opcional, ajuste a cor do ícone */
+}
+
+.menu h1{
+    font-size: 23px;
+}
+
+.menuDesafio{
+    background-color: rgb(255, 255, 255);
+
+    display: none;
+    position: fixed;
+    left: 4%;
+    top: 50px;
+    width: 15%;
+    height: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    justify-content: space-between;
+    border-radius: 30px;
+    font-weight: 550;
+    border: 6px solid transparent; /* Defina a borda transparente para criar espaço */
+    border-image: linear-gradient(60deg, rgb(122, 255, 118) 20%, rgb(0, 119, 8) 100%) 1;
+    
+    transition: all 0.5s ease-in-out; /* A transição da altura será suave */
+}
+
+
+.menuDesafio .desafios{
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 15px 10px 10px;
+}
+.menuDesafio h1{
+    text-align: center;
+}
+.menuDesafio p{
+    text-align: center;
+}
+
+.conteudo {
+    text-align: center;
+}
+
+.Principal-text {
+    animation: wiggle 550ms linear alternate infinite;
+    padding: 10px; 
+    margin-bottom: 20px;
+}
+.btn-img {
+    margin: 5px;
+    width: 160px; /* Largura semelhante ao botão */
+    height: 160px; /* Altura semelhante ao botão */
+    border-radius: 30px; /* Bordas arredondadas */
+    object-fit: cover; /* Ajusta a imagem ao contêiner */
+}
+
+.btn{
+    margin: 5px;
+    width: 160px;
+    height: 160px;
+    border-radius: 30px;
+    border-width: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.rock{
+    background-image: url(/assents/Rock.webp);
+    
+}
+.rock:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+.paper{
+    background-image: url(/assents/Paper.webp)
+}
+.paper:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+.scissor{
+    background-image: url(/assents/Scissors.webp);
+}
+.scissor:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+
+.flintandsteal{
+    display: none;
+    background-image: url(/assents/FlintAndSteel.webp);
+}
+.flintandsteal:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+
+.flintandstealpc{
+    display: none;
+}
+
+.porkchop{
+    background-image: url(/assents/Porkchop.webp);
+}
+.porkchop:hover{
+    animation: wiggle 280ms linear alternate infinite;
+    background-color: #d63384;
+}
+
+
+.btn-outline-pink {
+    background-color: #d63384;
+    color: #fff;
+    border: none;
+}
+
+
+.Principal-text{
+    font-size: 42px;
+    border-radius: 30px;
+}
+
+.animate-bounce {
+    animation: bounce 0.5s ease-in-out;
+}
+
+.no-drag{
+    cursor: none;
+    -webkit-user-drag: none;  /* Para navegadores baseados em WebKit (Safari, Chrome) */
+    user-drag: none;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+footerPoints h1{
+    margin-left: 15px;
+}
+
+.btt-shopDiv{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    padding: 0px 4px;
+
+    margin: none;
+    display: flex;
+    background-color: none;
+    border: #166d45 solid 6px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.btt-shopText{
+    color: #198754;
+    font-size: 25px;
+    font-weight: 900;
+    border: none;
+    border-radius: 30px;
+    padding: 2px 10px 2px 10px;
+    margin-bottom: 0px;
+}
+
+.btt-shopDiv:hover{
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.shopWin {
+    display: none;
+    padding: 10px;
+
+    border: black solid 8px;
+    border-radius: 16px;
+
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    background-color: white;
+}
+
+.shopWin h1 {
+    margin: 0; 
+    margin-bottom: 12px;
+    text-align: center; 
+}
+
+.btn-shop{
+    margin: 5px;
+    color: black;
+    width: auto;
+    height: 60px;
+    border-radius: 30px;
+    border-width: 7px;
+    background-position: center;
+    background-size: cover;
+}
+
+.display-none{
+    display: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes wiggle {
+    0% {
+        transform: rotate(-1deg);
+        
+    }
+    100% {
+        transform: rotate(1deg);
+        
+    }
+    }
+
+    @keyframes downUp {
+    0% {
+        transform: translateY(-2px);
+        
+    }
+    100% {
+        transform: translateY(2px);
+        
+    }
+    }
+
+    @keyframes upDown {
+    0% {
+        transform: translateY(2px);
+        
+    }
+    100% {
+        transform: translateY(-2px);
+        
+    }
+    }

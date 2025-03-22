@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>R.P.S</title>
+    <link rel="stylesheet" href="css/style.css"
+</head>
+<body>
+    <div class="top-bar">
+        <div class="menuButtons">
+            <button type="button" id='btn-menu' class="btn-menu" onclick="toggleMenu('menuDesafio')">
+                <h1>?</h1>
+            </button>
+        </div>
+        <div class="menu">
+            <h1 id="vitoriaMenu">Vitorias: 0 </h1>
+            <h1 id="derrotaMenu">Derrotas: 0 </h1>
+        </div>
+    </div>
+
+    <div id="menuDesafio" class="menuDesafio">
+        <div class="desafios">
+            <h1>Desafios:</h1>
+            <p>+10pts. Ganhar 3 vezes consecutivas.</p>
+            <p>+12pts. Empatar 3 vezes consecutivas.</p>
+            <p id="6loses">+20px. Perder 6 vezes.</p>
+            <p id="6wins">+25pts. Ganhar 6 vezes.</p>
+            <p>+100pts. Quebrar o site.</p>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        
+        <h1 class="Secundario-text" id="texto-secundario"></h1>
+        <h1 class="Principal-text" id="texto-principal">Faça sua escolha!</h1>
+        <h1 class="Terciario-text" id="texto-terciario"></h1>
+        
+        <div class="btn-comp">
+            <img src="assents/Rock.webp" alt="Scissors" id="rockpc" class="btn-img rockpc">
+            <img src="assents/Paper.webp" alt="Scissors" id="paperpc" class="btn-img paperpc">
+            <img src="assents/Scissors.webp" alt="Scissors" class="btn-img scissorspc">
+            <img src="assents/FlintAndSteel.webp" alt="FlintAndSteal" id="btnFlintAndStealPC"class="btn-img flintandstealpc ">
+        </div>
+
+        <div class="gap no-drag"></div>
+
+        <div class="buttons">
+            <button id="btnRock" type="button" class="btn btn-outline-success rock" onclick="principalText('Pedra'), jogo('Pedra'), bgOnClick('success'), applyAnimation('btnRock', 'animate-bounce')"></button>
+            <button id="btnPaper" type="button" class="btn btn-outline-primary paper" onclick="principalText('Papel'), jogo('Papel'), bgOnClick('primary'), applyAnimation('btnPaper', 'animate-bounce')"></button>
+            <button id="btnScissors" type="button" class="btn btn-outline-danger scissor" onclick="principalText('Tesoura'), jogo('Tesoura'), bgOnClick('danger'), applyAnimation('btnScissors', 'animate-bounce')"></button>
+            <button id="btnFlintAndSteal" type="button" class="btn btn-outline-warning flintandsteal" onclick="principalText('Isqueiro'), jogo('Isqueiro'), bgOnClick('warning'), applyAnimation('btnFlintAndSteal', 'animate-bounce'), fireAdd()"></button>
+            <!--<button id="btnPorkchop" type="button" class="btn btn-outline-pink porkchop" onclick="principalText('Porkchop'), jogo('Porkchop'), bgOnClick(), applyAnimation('btnPorkchop', 'animate-bounce')"></button>-->
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footerPoints">
+            <h1 id="points">Pontos: 0</h1>
+        </div>
+
+        <div class="btt-shopDiv">
+            <button id="btt-shopText" class="btt-shopText" onclick="toggleMenu('shopWinId')">J</button>
+        </div>
+    </footer>
+
+    <div id="shopWinId"class="shopWin">
+        <h1>Shop</h1>
+        <button type="button" id="btn-shop1" class="btn-shop" onclick="toggleMenu('shopWinId'), shopBuyItemFlintAndSteal('btnFlintAndSteal', 'btnFlintAndStealPC')">Flint and Steal <strong>300pts</strong></button>
+        <button type="button" id="btn-shop2" class="btn-shop" onclick="toggleAudio()">Musiquinha de Fundo <strong>100pts</strong></button>
+        <button type="button" id="btn-shop3" class="btn-shop" onclick="apagarFogo()">Balde de água <strong>500pts</strong></button>
+
+    </div>
+
+
+    <!--Musica de Fundo-->
+    <audio id="audioFundo" src="/assents/sounds/HylicsOST.mp3" loop>
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <!-- Logica principal do site -->
+    <script src="js/script.js"></script>
+</body>
+</html>
