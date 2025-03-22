@@ -248,13 +248,13 @@ function tocarSom(audio) {
 
 
 // Adicionar o evento de clique aos botões
-document.getElementById('btnFlintAndSteal').addEventListener('click', () => tocarSom('/assets/sounds/Flint_and_steel_click.ogg'));
-document.getElementById('btnScissors').addEventListener('click', () => tocarSom('/assets/sounds/Shear.ogg'));
-document.getElementById('btnPaper').addEventListener('click', () => tocarSom('/assets/sounds/Page_turn1.ogg'));
-document.getElementById('btnRock').addEventListener('click', () => tocarSom('/assets/sounds/Calcite_break1.ogg'));
-document.getElementById('btn-shop1').addEventListener('click', () => tocarSom('/assets/sounds/Pop.ogg'));
-document.getElementById('btn-shop2').addEventListener('click', () => tocarSom('/assets/sounds/Pop.ogg'));
-document.getElementById('btn-shop3').addEventListener('click', () => tocarSom('/assets/sounds/Pop.ogg'));
+document.getElementById('btnFlintAndSteal').addEventListener('click', () => tocarSom('../../assets/sounds/Flint_and_steel_click.ogg'));
+document.getElementById('btnScissors').addEventListener('click', () => tocarSom('../../assets/sounds/Shear.ogg'));
+document.getElementById('btnPaper').addEventListener('click', () => tocarSom('../../assets/sounds/Page_turn1.ogg'));
+document.getElementById('btnRock').addEventListener('click', () => tocarSom('../../assets/sounds/Calcite_break1.ogg'));
+document.getElementById('btn-shop1').addEventListener('click', () => tocarSom('../../assets/sounds/Pop.ogg'));
+document.getElementById('btn-shop2').addEventListener('click', () => tocarSom('../../assets/sounds/Pop.ogg'));
+document.getElementById('btn-shop3').addEventListener('click', () => tocarSom('../../assets/sounds/Pop.ogg'));
 
 function addBackgroundImage(elementId, newImageUrl) {
     const element = document.getElementById(elementId);
@@ -310,7 +310,7 @@ function apagarFogo(){
     if(backgroundImage !== 'url("")'){
         console.log(backgroundImage)
         body.style.backgroundImage = ``; 
-        tocarSom('/assets/sounds/Fizz.ogg')
+        tocarSom('../../assets/sounds/Fizz.ogg')
     }; 
 }
 
@@ -327,7 +327,7 @@ const fireAdd= () =>{
 const fireCheck = () =>{
     if(fire === 3){
         addBackgroundImage('paperpc','/assets/Fire.webp')
-        tocarSom('/assets/sounds/Fire.ogg')
+        tocarSom('../../assets/sounds/Fire.ogg')
     } else if (fire === 6){
         addBackgroundImage('rockpc','/assets/Fire.webp')
         tocarSom('/assets/sounds/Fire.ogg')
