@@ -248,13 +248,13 @@ function tocarSom(audio) {
 
 
 // Adicionar o evento de clique aos botões
-document.getElementById('btnFlintAndSteal').addEventListener('click', () => tocarSom('/assents/sounds/Flint_and_steel_click.ogg'));
-document.getElementById('btnScissors').addEventListener('click', () => tocarSom('/assents/sounds/Shear.ogg'));
-document.getElementById('btnPaper').addEventListener('click', () => tocarSom('/assents/sounds/Page_turn1.ogg'));
-document.getElementById('btnRock').addEventListener('click', () => tocarSom('/assents/sounds/Calcite_break1.ogg'));
-document.getElementById('btn-shop1').addEventListener('click', () => tocarSom('/assents/sounds/Pop.ogg'));
-document.getElementById('btn-shop2').addEventListener('click', () => tocarSom('/assents/sounds/Pop.ogg'));
-document.getElementById('btn-shop3').addEventListener('click', () => tocarSom('/assents/sounds/Pop.ogg'));
+document.getElementById('btnFlintAndSteal').addEventListener('click', () => tocarSom('/assets/sounds/Flint_and_steel_click.ogg'));
+document.getElementById('btnScissors').addEventListener('click', () => tocarSom('/assets/sounds/Shear.ogg'));
+document.getElementById('btnPaper').addEventListener('click', () => tocarSom('/assets/sounds/Page_turn1.ogg'));
+document.getElementById('btnRock').addEventListener('click', () => tocarSom('/assets/sounds/Calcite_break1.ogg'));
+document.getElementById('btn-shop1').addEventListener('click', () => tocarSom('/assets/sounds/Pop.ogg'));
+document.getElementById('btn-shop2').addEventListener('click', () => tocarSom('/assets/sounds/Pop.ogg'));
+document.getElementById('btn-shop3').addEventListener('click', () => tocarSom('/assets/sounds/Pop.ogg'));
 
 function addBackgroundImage(elementId, newImageUrl) {
     const element = document.getElementById(elementId);
@@ -310,7 +310,7 @@ function apagarFogo(){
     if(backgroundImage !== 'url("")'){
         console.log(backgroundImage)
         body.style.backgroundImage = ``; 
-        tocarSom('/assents/sounds/Fizz.ogg')
+        tocarSom('/assets/sounds/Fizz.ogg')
     }; 
 }
 
@@ -326,22 +326,22 @@ const fireAdd= () =>{
 
 const fireCheck = () =>{
     if(fire === 3){
-        addBackgroundImage('paperpc','/assents/Fire.webp')
-        tocarSom('/assents/sounds/Fire.ogg')
+        addBackgroundImage('paperpc','/assets/Fire.webp')
+        tocarSom('/assets/sounds/Fire.ogg')
     } else if (fire === 6){
-        addBackgroundImage('rockpc','/assents/Fire.webp')
-        tocarSom('/assents/sounds/Fire.ogg')
+        addBackgroundImage('rockpc','/assets/Fire.webp')
+        tocarSom('/assets/sounds/Fire.ogg')
     } else if(fire === 9){
         removeBackgroundImage('paperpc')
-        changeImageSrc('paperpc', '/assents/Powder.webp')
-        tocarSom('/assents/sounds/Pop.ogg')
+        changeImageSrc('paperpc', '/assets/Powder.webp')
+        tocarSom('/assets/sounds/Pop.ogg')
     } else if (fire === 12){
         removeBackgroundImage('rockpc')
-        changeImageSrc('rockpc', '/assents/Iron_Ingot.webp')
-        tocarSom('/assents/sounds/Pop.ogg')
+        changeImageSrc('rockpc', '/assets/Iron_Ingot.webp')
+        tocarSom('/assets/sounds/Pop.ogg')
     } else if (fire >= 13){
-        changeSiteBackground('/assents/Fire.Webp')
-        tocarSom('/assents/sounds/Fire.ogg')
+        changeSiteBackground('/assets/Fire.Webp')
+        tocarSom('/assets/sounds/Fire.ogg')
     }
 }
 

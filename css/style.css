@@ -141,20 +141,20 @@ h1{
 
 
 .rock{
-    background-image: url(/assents/Rock.webp);
+    background-image: url(/assets/Rock.webp);
     
 }
 .rock:hover{
     animation: wiggle 280ms linear alternate infinite;
 }
 .paper{
-    background-image: url(/assents/Paper.webp)
+    background-image: url(/assets/Paper.webp)
 }
 .paper:hover{
     animation: wiggle 280ms linear alternate infinite;
 }
 .scissor{
-    background-image: url(/assents/Scissors.webp);
+    background-image: url(/assets/Scissors.webp);
 }
 .scissor:hover{
     animation: wiggle 280ms linear alternate infinite;
@@ -162,7 +162,7 @@ h1{
 
 .flintandsteal{
     display: none;
-    background-image: url(/assents/FlintAndSteel.webp);
+    background-image: url(/assets/FlintAndSteel.webp);
 }
 .flintandsteal:hover{
     animation: wiggle 280ms linear alternate infinite;
@@ -173,7 +173,7 @@ h1{
 }
 
 .porkchop{
-    background-image: url(/assents/Porkchop.webp);
+    background-image: url(/assets/Porkchop.webp);
 }
 .porkchop:hover{
     animation: wiggle 280ms linear alternate infinite;
