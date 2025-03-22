@@ -251,7 +251,7 @@ function tocarSom(audio) {
 document.getElementById('btnFlintAndSteal').addEventListener('click', () => tocarSom('./assets/sounds/Flint_and_steel_click.ogg'));
 document.getElementById('btnScissors').addEventListener('click', () => tocarSom('./assets/sounds/Shear.ogg'));
 document.getElementById('btnPaper').addEventListener('click', () => tocarSom('./assets/sounds/Page_turn1.ogg'));
-document.getElementById('btnRock').addEventListener('click', () => tocarSom('./assets/sounds/Calcite_break1.ogg'));
+document.getElementById('btnRock').addEventListener('click', () => tocarSom('../assets/sounds/Calcite_break1.ogg'));
 document.getElementById('btn-shop1').addEventListener('click', () => tocarSom('./assets/sounds/Pop.ogg'));
 document.getElementById('btn-shop2').addEventListener('click', () => tocarSom('./assets/sounds/Pop.ogg'));
 document.getElementById('btn-shop3').addEventListener('click', () => tocarSom('./assets/sounds/Pop.ogg'));
