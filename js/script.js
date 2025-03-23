@@ -5,7 +5,6 @@ let winsInRow = 0;
 let losesInRow = 0;
 let points = 0;
 let fire = 0;
-//Peido
 
 let flintandsteal = false;
 
