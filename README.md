@@ -1,6 +1,7 @@
 # Rock Paper Scissors - Minecraft Themed
 
-![Minecraft Themed Rock Paper Scissors](![Capturar](https://github.com/user-attachments/assets/d67a2990-319d-43f1-b126-beea4495610f))
+![Capturar](https://github.com/user-attachments/assets/76acfe92-01f2-41b1-8492-712d56778599)
+
 
 ## Sobre o Projeto
 
