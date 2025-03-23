@@ -314,6 +314,7 @@ function apagarFogo(){
     const body = document.body;
     const estilo = window.getComputedStyle(body);
     const backgroundImage = estilo.backgroundImage;
+    points -= 500;
 
     if(backgroundImage !== 'url("")' && points >= 500){
         pointsRemove(500);
@@ -335,21 +336,21 @@ const fireAdd= () =>{
 
 const fireCheck = () =>{
     if(fire === 3){
-        addBackgroundImage('paperpc','../assets/Fire.webp')
+        addBackgroundImage('paperpc','./assets/Fire.webp')
         tocarSom('./assets/sounds/Fire.ogg')
     } else if (fire === 6){
-        addBackgroundImage('rockpc','../assets/Fire.webp')
+        addBackgroundImage('rockpc','./assets/Fire.webp')
         tocarSom('./assets/sounds/Fire.ogg')
     } else if(fire === 9){
         removeBackgroundImage('paperpc')
-        changeImageSrc('paperpc', '../assets/Powder.webp')
+        changeImageSrc('paperpc', './assets/Powder.webp')
         tocarSom('./assets/sounds/Pop.ogg')
     } else if (fire === 12){
         removeBackgroundImage('rockpc')
-        changeImageSrc('rockpc', '../assets/Iron_Ingot.webp')
+        changeImageSrc('rockpc', './assets/Iron_Ingot.webp')
         tocarSom('./assets/sounds/Pop.ogg')
     } else if (fire >= 13){
-        changeSiteBackground('../assets/Fire.Webp')
+        changeSiteBackground('./assets/Fire.webp')
         tocarSom('./assets/sounds/Fire.ogg')
     }
 }
