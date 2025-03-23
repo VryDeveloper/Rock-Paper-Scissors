@@ -306,6 +306,7 @@ function apagarFogo(){
     const body = document.body;
     const estilo = window.getComputedStyle(body);
     const backgroundImage = estilo.backgroundImage;
+    points -= 500;
 
     if(backgroundImage !== 'url("")'){
         console.log(backgroundImage)
