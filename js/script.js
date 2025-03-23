@@ -45,6 +45,12 @@ function toggleBg(className) {
     }
 }
 
+pointsRemove = (pointsToRemove) =>{
+    points -= pointsToRemove;
+    const textPoints = document.getElementById('points')
+    textPoints.textContent = `Pontos: ${points}`;
+}
+
 const pointsAdd = (pointsToAdd) =>{
     const textPoints = document.getElementById('points')
     points += pointsToAdd;
@@ -61,6 +67,7 @@ const desafioCheckWins = () => {
         textPoints.textContent = `Pontos: ${points}`;
     }
 }
+
 const desafioCheckLoses = () => {
     const textDesafioLoses = document.getElementById('6loses')
     const textPoints = document.getElementById('points')
@@ -219,7 +226,7 @@ const toggleItem = (itemId) => {
 const shopBuyItemFlintAndSteal = (itemId,itemIdPc) => {
     if (!flintandsteal){
         if(points >= 300){
-            points -= 300
+            pointsRemove(300);
             toggleItem(itemId)
             toggleItem(itemIdPc)
             flintandsteal = true;
@@ -230,7 +237,8 @@ const audio = document.getElementById('audioFundo');
 
 audio.volume = 0.2;
 function toggleAudio() {
-    if (audio.paused) {
+    if (audio.paused && points >= 100) {
+        pointsRemove(100);
         audio.play(); // Toca o áudio se ele estiver pausado
         console.log("Música ligada");
     } else {
@@ -307,7 +315,8 @@ function apagarFogo(){
     const estilo = window.getComputedStyle(body);
     const backgroundImage = estilo.backgroundImage;
 
-    if(backgroundImage !== 'url("")'){
+    if(backgroundImage !== 'url("")' && points >= 500){
+        pointsRemove(500);
         console.log(backgroundImage)
         body.style.backgroundImage = ``; 
         tocarSom('./assets/sounds/Fizz.ogg')
