@@ -1,5 +1,12 @@
 # Rock Paper Scissors - Minecraft Themed
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML-5-orange?logo=html5" alt="HTML Version" />
+  <img src="https://img.shields.io/badge/CSS-3-blue?logo=css3" alt="CSS Version" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript" alt="JavaScript Version" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License" />
+</p>
+
 ![Capturar](https://github.com/user-attachments/assets/76acfe92-01f2-41b1-8492-712d56778599)
 
 
