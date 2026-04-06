@@ -1,0 +1,600 @@
+*{
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    font-weight: 550;
+}
+
+.rm-border{
+    border: none;
+    outline: none;
+}
+
+.gap{
+    padding: 8px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: #198754;
+    color: white;
+    padding: 5px 0;
+    z-index: 1000; /* Garante que a barra fique sobre outros elementos */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    margin-top: 6px;
+    margin-right: 8px;
+    display: flex; /* Organiza os links em linha */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.top-bar .menuButtons{
+    position: absolute;
+    left: 5px;
+}
+
+.top-bar .menuButtons .btn-menu {
+
+    border: none;
+    width: 45px; /* Define a largura */
+    height: 45px; /* Define a altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Opcional, ajusta o fundo */
+}
+
+.top-bar .menuButtons .btn-menu h1 {
+    margin-top: 10px;
+    font-size: 44px; /* Ajuste o tamanho do ícone */
+    color: #fff; /* Opcional, ajuste a cor do ícone */
+}
+
+.menu h1{
+    font-size: 23px;
+}
+
+.menuDesafio{
+    background-color: rgb(255, 255, 255);
+
+    display: none;
+    position: fixed;
+    left: 4%;
+    top: 50px;
+    width: 15%;
+    height: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    justify-content: space-between;
+    border-radius: 30px;
+    font-weight: 550;
+    border: 6px solid transparent; /* Defina a borda transparente para criar espaço */
+    border-image: linear-gradient(60deg, rgb(122, 255, 118) 20%, rgb(0, 119, 8) 100%) 1;
+    
+    transition: all 0.5s ease-in-out; /* A transição da altura será suave */
+}
+
+
+.menuDesafio .desafios{
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 15px 10px 10px;
+}
+.menuDesafio h1{
+    text-align: center;
+}
+.menuDesafio p{
+    text-align: center;
+}
+
+.conteudo {
+    text-align: center;
+}
+
+.Principal-text {
+    animation: wiggle 550ms linear alternate infinite;
+    padding: 10px; 
+    margin-bottom: 20px;
+}
+.btn-img {
+    margin: 5px;
+    width: 160px; /* Largura semelhante ao botão */
+    height: 160px; /* Altura semelhante ao botão */
+    border-radius: 30px; /* Bordas arredondadas */
+    object-fit: cover; /* Ajusta a imagem ao contêiner */
+}
+
+.btn{
+    margin: 5px;
+    width: 160px;
+    height: 160px;
+    border-radius: 30px;
+    border-width: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.rock{
+    background-image: url(../assets/Rock.webp);
+    
+}
+.rock:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+.paper{
+    background-image: url(../assets/Paper.webp)
+}
+.paper:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+.scissor{
+    background-image: url(../assets/Scissors.webp);
+}
+.scissor:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+
+.flintandsteal{
+    display: none;
+    background-image: url(../assets/FlintAndSteel.webp);
+}
+.flintandsteal:hover{
+    animation: wiggle 280ms linear alternate infinite;
+}
+
+.flintandstealpc{
+    display: none;
+}
+
+.porkchop{
+    background-image: url(../assets/Porkchop.webp);
+}
+.porkchop:hover{
+    animation: wiggle 280ms linear alternate infinite;
+    background-color: #d63384;
+}
+
+
+.btn-outline-pink {
+    background-color: #d63384;
+    color: #fff;
+    border: none;
+}
+
+
+.Principal-text{
+    font-size: 42px;
+    border-radius: 30px;
+}
+
+.animate-bounce {
+    animation: bounce 0.5s ease-in-out;
+}
+
+.no-drag{
+    cursor: none;
+    -webkit-user-drag: none;  /* Para navegadores baseados em WebKit (Safari, Chrome) */
+    user-drag: none;
+}
+
+gameFooter{
+    display: none;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+footerPoints h1{
+    margin-left: 15px;
+    display: flex;
+}
+
+.btt-shopDiv{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    padding: 0px 4px;
+
+    margin: none;
+    display: flex;
+    background-color: none;
+    border: #166d45 solid 6px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.btt-shopText{
+    color: #198754;
+    font-size: 25px;
+    font-weight: 900;
+    border: none;
+    border-radius: 30px;
+    padding: 2px 10px 2px 10px;
+    margin-bottom: 0px;
+}
+
+.btt-shopDiv:hover{
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.shopWin {
+    display: none;
+    padding: 10px;
+
+    border: black solid 8px;
+    border-radius: 16px;
+
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    background-color: white;
+}
+
+.shopWin h1 {
+    margin: 0; 
+    margin-bottom: 12px;
+    text-align: center; 
+}
+
+.btn-shop{
+    margin: 5px;
+    color: black;
+    width: auto;
+    height: 60px;
+    border-radius: 30px;
+    border-width: 7px;
+    background-position: center;
+    background-size: cover;
+}
+
+.display-none{
+    display: none;
+}
+
+.btn-green{
+    color: #ffffff;
+    background: #166d45;
+    background-color: #166d45;
+}
+
+
+.btn-softgreen{
+    color: #ffffff;
+    background: #198754;
+    background-color: #198754;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes wiggle {
+    0% {
+        transform: rotate(-1deg);
+        
+    }
+    100% {
+        transform: rotate(1deg);
+        
+    }
+    }
+
+    @keyframes downUp {
+    0% {
+        transform: translateY(-2px);
+        
+    }
+    100% {
+        transform: translateY(2px);
+        
+    }
+    }
+
+    @keyframes upDown {
+    0% {
+        transform: translateY(2px);
+        
+    }
+    100% {
+        transform: translateY(-2px);
+        
+    }
+    }
+
+/* ESTILOS DO LOBBY MULTIPLAYER */
+
+#fallingCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.lobby-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.lobby-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.lobby-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-name-section {
+    margin-bottom: 30px;
+}
+
+.player-name-input {
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.player-name-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.lobby-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.lobby-btn {
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lobby-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.entrar-sala-div {
+    background: rgba(248, 249, 250, 0.8);
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-join {
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    gap: 10px;
+    background-color: #007bff;
+    color: white;
+}
+.btn-join:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-sair {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 41, 41);
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    gap: 10px;
+}
+
+
+
+
+.codigo-input {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #28a745;
+}
+
+.sala-info {
+    background: rgba(40, 167, 69, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #28a745;
+    margin-bottom: 20px;
+}
+
+.sala-info h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.mensagens-lobby {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+/* ESTILOS DO JOGO MULTIPLAYER */
+.game-container {
+    
+}
+
+.adversario-info {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    transform: translateY(-50%);
+    background: rgba(232, 232, 232, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.adversario-info h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.adversario-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.game-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.game-controls .btn {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .lobby-content {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .lobby-title {
+        font-size: 2rem;
+    }
+    
+    .adversario-info {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin: 10px;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .menu {
+        margin: 5px 0;
+    }
+    
+    .menuDesafio {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 120px;
+        height: 120px;
+        margin: 3px;
+    }
+    
+    .btn-img {
+        width: 120px;
+        height: 120px;
+        margin: 3px;
+    }
+    
+    .Principal-text {
+        font-size: 1.5rem;
+    }
+    
+    .lobby-btn {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+    }
+}
